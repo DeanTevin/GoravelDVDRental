@@ -21,6 +21,8 @@ type Film struct {
 	SpecialFeatures helpers.SpecialFeatures `gorm:"type:text"` //using custom datatypes. This is great lol!
 	Fulltext        helpers.Fulltext        `gorm:"type:text"`
 	Language        *Language
+	Actors          []*Actor `gorm:"many2many:film_actor;joinForeignKey:film_id;joinReferences:actor_id"`
+	Categories		[]*Category `gorm:"many2many:film_category;joinForeignKey:film_id;joinReferences:category_id"`
 }
 
 func (Film) TableName() string {

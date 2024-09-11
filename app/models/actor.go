@@ -9,6 +9,7 @@ type Actor struct {
 	FirstName  string
 	LastName   string
 	LastUpdate carbon.DateTime
+	Film       []*Film `gorm:"many2many:film_actor;joinForeignKey:actor_id;joinReferences:film_id"`
 }
 
 func (Actor) TableName() string {
