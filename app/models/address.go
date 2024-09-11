@@ -13,6 +13,7 @@ type Address struct {
 	PostalCode      string
 	Phone           string
 	LastUpdate      carbon.DateTime
+	City            *City
 }
 
 func (Address) TableName() string {
