@@ -8,7 +8,7 @@ type Staff struct {
 	ID         uint `gorm:"primaryKey;column:staff_id"`
 	FirstName  string
 	LastName   string
-	AddressId  int16
+	AddressID  int16
 	Email      string
 	StoreID    int16
 	Active     bool `json:"-"`

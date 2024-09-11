@@ -7,7 +7,7 @@ import (
 type Store struct {
 	ID         uint    `gorm:"primaryKey;column:store_id"`
 	Manager    Manager `gorm:"ForeignKey:ID"`
-	AddressId  int16
+	AddressID  int16
 	LastUpdate carbon.DateTime
 	Staff      []*Staff
 }

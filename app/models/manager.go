@@ -8,7 +8,7 @@ type Manager struct {
 	ID         uint `gorm:"primaryKey;column:staff_id"`
 	FirstName  string
 	LastName   string
-	AddressId  int16
+	AddressID  int16
 	Email      string
 	Active     bool `json:"-"`
 	Username   string
